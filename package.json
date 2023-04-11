@@ -17,7 +17,7 @@
     "bump-minor": "npm version minor",
     "bump-major": "npm version major"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/rock-the-party/clean-typescript.git"
   },
@@ -25,11 +25,15 @@
     "url": "https://github.com/rock-the-party/clean-typescript/issues"
   },
   "keywords": [],
+  "dependencies": {
+    
+  },
   "devDependencies": {
-    "jest": "^29.5.0",
-    "typescript": "^5.0.3",
     "@types/jest": "^29.5.0",
-    "ts-jest": "^29.1.0"
+    "@types/offscreencanvas": "^2019.7.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.3"
   },
   "jest": {
     "preset": "ts-jest",
