@@ -1,5 +1,5 @@
 {
-  "name": "@r-t-p/clean-typescript",
+  "name": "@r-t-p/renderer",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
