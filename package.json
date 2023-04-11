@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rock-the-party/clean-typescript.git"
+    "url": "git+https://github.com/rock-the-party/renderer.git"
   },
   "bugs": {
-    "url": "https://github.com/rock-the-party/clean-typescript/issues"
+    "url": "https://github.com/rock-the-party/renderer/issues"
   },
   "keywords": [],
   "devDependencies": {
