@@ -12,7 +12,8 @@
 
     /* Language and Environment */
     "target": "ES6",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "types": ["offscreencanvas"],
+    "types": ["offscreencanvas", "jest"],
+    "typeRoots": ["./src/types", "node_modules/@types"],
     "lib": [
       "dom",
       "ES2019"
@@ -110,5 +111,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     // "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "__test__/*"]
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "__test__/*"],
+  "include": ["./src/**/*.ts"]
 }
