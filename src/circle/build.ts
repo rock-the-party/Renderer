@@ -1,14 +1,26 @@
 import { MetaData, Point, RadianAngle, RendererSpecType } from "../interfaces";
 import { CircleSpec } from "./spec";
 
+export function BuildCircle(): CircleSpecBuilder {
+  return new CircleSpecBuilder();
+}
 
-export class CircleSpecBuilder {
+class CircleSpecBuilder {
   private center: Point = { x: 0, y: 0};
   private radius: number = 0;
   private isFilled: boolean = true;
   private isClockwise: boolean = true;
   private radianAngle: RadianAngle = { start: 0, end: 2*Math.PI };
   private metadata: MetaData = { };
+
+  public Reset(): void {
+    this.center = { x: 0, y: 0};
+    this.radius = 0;
+    this.isFilled = true;
+    this.isClockwise = true;
+    this.radianAngle = { start: 0, end: 2*Math.PI };
+    this.metadata = { };
+  }
 
   public Alpha(alpha: number): CircleSpecBuilder {
     this.metadata.alpha = alpha;
@@ -58,7 +70,7 @@ export class CircleSpecBuilder {
       radius: this.radius,
       center: this.center,
       radianAngle: this.radianAngle,
-      metadata: this.metadata,
+      metadata: this.metadata
     }
   }
 }
