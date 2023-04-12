@@ -1,11 +1,12 @@
+import { IBuilder } from "../interface-private";
 import { MetaData, Point, RadianAngle, RendererSpecType } from "../interfaces";
 import { CircleSpec } from "./spec";
 
-export function BuildCircle(): CircleSpecBuilder {
+export function BuildCircleSpec(): CircleSpecBuilder {
   return new CircleSpecBuilder();
 }
 
-class CircleSpecBuilder {
+class CircleSpecBuilder implements IBuilder {
   private center: Point = { x: 0, y: 0};
   private radius: number = 0;
   private isFilled: boolean = true;

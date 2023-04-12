@@ -1,7 +1,7 @@
-import { CircleSpec } from "./circle/spec";
-import { ImageSpec } from "./image/draw";
-import { RectSpec } from "./rect/draw";
-import { TextSpec } from "./text/text";
+import { CircleSpec } from "./circle";
+import { ImageSpec } from "./image";
+import { RectSpec } from "./rect";
+import { TextSpec } from "./text";
 
 export type Point = {
   x: number;

@@ -1,3 +1,4 @@
+import { IBuilder } from "../interface-private";
 import { MetaData, Point, RendererSpecType, Size } from "../interfaces";
 import { ImageSpec } from "./spec";
 
@@ -6,7 +7,7 @@ export function BuildImageSpec(): ImageSpecBuilder {
   return new ImageSpecBuilder();
 }
 
-class ImageSpecBuilder {
+class ImageSpecBuilder implements IBuilder {
   private metadata: MetaData = { };
   private image: CanvasImageSource | OffscreenCanvas | null = null;
   private center: Point = {x: 0, y: 0};
