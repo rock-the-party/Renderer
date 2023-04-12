@@ -1,7 +1,7 @@
-import { CircleSpecBuilder } from "./draw-circle";
-import { ImageSpecBuilder } from "./draw-image";
-import { RectSpecBuilder } from "./draw-rect";
-import { TextSpecBuilder } from "./draw-text";
+import { CircleSpecBuilder } from "./circle/draw";
+import { ImageSpecBuilder } from "./image/draw";
+import { RectSpecBuilder } from "./rect/draw";
+import { TextSpecBuilder } from "./text/text";
 import { DrawableSpecs, RendererSpecType } from "./interfaces";
 
 export class SpecFactory {

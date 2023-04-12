@@ -1,4 +1,4 @@
-import { IBaseSpec, RendererSpecType, Point } from "./interfaces";
+import { IBaseSpec, RendererSpecType, Point } from "../interfaces";
 
 export interface TextSpec extends IBaseSpec {
   spec: RendererSpecType.TextSpec;

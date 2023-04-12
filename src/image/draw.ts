@@ -1,4 +1,4 @@
-import { IBaseSpec, Point, RendererSpecType, Size } from "./interfaces";
+import { IBaseSpec, Point, RendererSpecType, Size } from "../interfaces";
 
 
 export interface ImageSpec extends IBaseSpec {

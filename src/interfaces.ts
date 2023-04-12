@@ -1,18 +1,16 @@
-import { CircleSpec } from "./draw-circle";
-import { ImageSpec } from "./draw-image";
-import { RectSpec } from "./draw-rect";
-import { TextSpec } from "./draw-text";
+import { CircleSpec } from "./circle/spec";
+import { ImageSpec } from "./image/draw";
+import { RectSpec } from "./rect/draw";
+import { TextSpec } from "./text/text";
 
 export type Point = {
   x: number;
   y: number;
-  z: number;
 }
 
 export type Size = {
   height: number;
   width: number;
-  depth: number;
 }
 
 export type RadianAngle = {
@@ -23,12 +21,8 @@ export type RadianAngle = {
 export type MetaData = {
   alpha?: number;
   rotation?: number;
-  color?: string | CanvasGradient | CanvasPattern;
-}
-
-export interface IBaseSpec {
-  metadata: MetaData;
-  spec: RendererSpecType;
+  strokeStyle?:  string | CanvasGradient | CanvasPattern;
+  fillStyle?:  string | CanvasGradient | CanvasPattern;
 }
 
 export enum RendererSpecType {

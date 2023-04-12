@@ -1,4 +1,4 @@
-import { Point, RendererSpecType, Size, IBaseSpec } from "./interfaces";
+import { Point, RendererSpecType, Size, IBaseSpec } from "../interfaces";
 
 export interface RectSpec extends IBaseSpec {
     spec: RendererSpecType.RectSpec;
