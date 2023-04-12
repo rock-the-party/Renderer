@@ -1,6 +1,6 @@
 {
   "name": "@r-t-p/renderer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "bin/index.js",
   "types": "bin/index.d.ts",
@@ -35,6 +35,9 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": [ "**/*.test.ts", "__test__/*" ]
+    "testMatch": [
+      "**/*.test.ts",
+      "__test__/*"
+    ]
   }
 }
