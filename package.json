@@ -1,9 +1,9 @@
 {
   "name": "@r-t-p/renderer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "bin/index.js",
+  "types": "bin/index.d.ts",
   "author": "justplainfred",
   "license": "MIT",
   "scripts": {
@@ -36,8 +36,8 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "testMatch": [
-      "**/__tests__/**/*.ts",
-      "**/?(*.)+(spec|test).ts"
+      "**/*.test.ts",
+      "__test__/*"
     ]
   }
 }

@@ -1,8 +1,8 @@
-import { DrawCircle } from "./src/draw-circle";
-import { DrawImage } from "./src/draw-image";
-import { DrawRect } from "./src/draw-rect";
-import { DrawText } from "./src/draw-text";
-import { DrawableSpecs, RendererSpecType } from "./src/interfaces";
+import { DrawCircle } from "./circle";
+import { DrawImage } from "./image";
+import { DrawableSpecs, RendererSpecType } from "./interfaces";
+import { DrawRect } from "./rect";
+import { DrawText } from "./text";
 
 export interface IRenderer {
   ClearCanvas(): void;
