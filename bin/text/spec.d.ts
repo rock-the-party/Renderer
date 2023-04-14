@@ -1,6 +1,6 @@
 import { IBaseSpec } from "../interface-private";
 import { RendererSpecType, Point } from "../interfaces";
-export interface TextSpec extends IBaseSpec {
+export type TextSpec = IBaseSpec & {
     spec: RendererSpecType.TextSpec;
     startPoint: Point;
     text: string;
@@ -10,4 +10,4 @@ export interface TextSpec extends IBaseSpec {
     fontKerning?: CanvasFontKerning;
     textAlign?: CanvasTextAlign;
     textBaseline?: CanvasTextBaseline;
-}
+};

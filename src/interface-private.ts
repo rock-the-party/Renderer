@@ -1,6 +1,6 @@
 import { DrawableSpecs, MetaData, RendererSpecType } from "./interfaces";
 
-export interface IBaseSpec {
+export type IBaseSpec = {
   metadata: MetaData;
   spec: RendererSpecType;
 }

@@ -1,9 +1,5 @@
 import { DrawableSpecs } from "./interfaces";
-export interface IRenderer {
-    ClearCanvas(): void;
-    Draw(spec: DrawableSpecs): void;
-}
-export declare class Renderer implements IRenderer {
+export declare class Renderer {
     private canvas;
     private context;
     constructor(canvas: HTMLCanvasElement);

@@ -1,45 +1,74 @@
-# clean-typescript
-
-This is a simple typescript template repo for getting started.  Start coding index.ts.  Tooling uses:
-
-- `tsc` for building
-- `jest` for testing
-- `npm` for versioning
-- `.github/workflows` (i.e github actions) for automation
-- `releasing` on github will publish to npm
-
-If you want to release to npm you can release with the button in github and the github actions will ship it to npm.
-
-If you are using this in your own project and want to publish to NPM you will need to save a token 
-
-## To Do with a new repo
-
-- [ ] Update the package.json with the correct repo and name
-- [ ] Publish to npm for the first time. Doing it locally with `npm publish --access=public` is probably easiest
-- [ ] Clear template info for readme and update with better info
-
-### Versioning
-
-These commands should be run from the master branch when ready to bump a version.
-Bumping a version will commit the bump and push it up as long as pushing tags up for release.
-
-- `npm run bump` - Bumps current version i.e. `1.2.4` would bump to `1.2.5`
-- `npm run bump-minor` - Bumps Minor version i.e. `1.2.4` would bump to `1.3.0`
-- `npm run bump-major` - Bumps current version i.e. `1.2.4` would bump to `2.0.0`
-
-
-## In your repo, delete above this and carry on with your new repo ^^^
+# Renderer
 
 - [Getting Started](#getting-started)
-<!-- add linkes to content here -->
+- [Renderer](#renderer)
+- [Builders](#builders)
+- [Together](#together)
 - [Contributing](#contributing)
-
 
 ## Getting Started
 
-<!-- Add example of how to npm install -->
+You probably will want to save this to your dev dependencies.
 
-<!-- Add content here code examples -->
+  ```bash
+  npm i --save-dev @r-t-p/renderer
+  ```
+
+Also remember to bundle it with a bundler like [webpack](https://webpack.js.org/) in your project to pull it into your bundle
+
+## Renderer
+
+The renderer is the object that holds a reference to your canvas and it's context.  Instantiating one by passing in the canvas element.
+
+```typescript
+import { Renderer } from '@r-t-p/renderer';
+
+let canvas = document.getElementById("canvas") as HTMLCanvasElement;
+let renderer = new Renderer(canvas);
+```
+
+The renderer only has 2 methods:
+
+- `Clear` - will clear teh canvas.
+- `Draw` - takes in a spec and draws it.
+
+## Builders
+
+There are builders that make it easy to create specs for circles, rectangles, images and text.  Each builder can update the properties that are available to it's own type.  Here is an example of a circle being built.
+
+```typescript
+import { BuildCircleSpec } from '@r-t-p/renderer';
+
+let circle = BuildCircleSpec()
+  .Center({ x: 250, y: 250 })
+  .FillStyle("blue")
+  .Radius(100)
+  .Create();
+```
+
+Once you have a spec created (from the `Create` function) it is an object you can interact with and change on the fly, then pass back into the Renderer's Draw method.
+
+## Together
+
+Putting it all together you might make something like this:
+
+```typescript
+import { BuildCircleSpec, Renderer } from '@r-t-p/renderer';
+
+let canvas = document.getElementById("canvas") as HTMLCanvasElement;
+let r = new Renderer(canvas);
+
+let circle = BuildCircleSpec()
+  .Center({ x: 100, y: 100 })
+  .FillStyle("blue")
+  .Radius(100)
+  .Create();
+
+r.Draw(circle);
+circle.center = {x: 300, y: 300 };
+circle.metadata.fillStyle = "green";
+r.Draw(circle);
+```
 
 ## Contributing
 

@@ -2,7 +2,7 @@ import { CircleSpec } from "./spec";
 
 export function DrawCircle(spec: CircleSpec, context: CanvasRenderingContext2D): void {
     if (context == null) return;
-    context.save()
+    context.save();
 
     if (spec.metadata.alpha) {
       context.globalAlpha = spec.metadata.alpha;
